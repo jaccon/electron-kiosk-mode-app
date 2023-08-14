@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Electron Webview</title>
+</head>
+<body>
+    <button id="open-button">Open Webpage</button>
+    <div id="webview-container"></div>
+
+    <script>
+    const { ipcRenderer } = require('electron');
+
+    const webviewContainer = document.getElementById('webview-container');
+    const openButton = document.getElementById('open-button');
+
+    openButton.addEventListener('click', () => {
+        ipcRenderer.invoke('open-url', 'https://tv.donaanadocesesalgados.com.br/canal-loja-01/');
+    });
+    </script>
+</body>
+</html>

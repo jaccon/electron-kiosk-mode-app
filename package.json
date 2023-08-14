@@ -1,0 +1,30 @@
+{
+    "name": "electron-webview",
+    "version": "1.0.0",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron .",
+        "build:win": "electron-builder --win",
+        "build:mac": "electron-builder --mac"
+    },
+    "author": "Your Name",
+    "license": "MIT",
+    "build": {
+        "productName": "PagefaiTVIndoor",
+        "appId": "com.pagefai.tvindoor",
+        "directories": {
+            "output": "build"
+        },
+        "mac": {
+            "target": "dmg",
+            "category": "tv"
+        },
+        "win": {
+            "target": "nsis",
+            "icon": "assets/icon.ico"
+        }
+    },
+    "devDependencies": {
+        "electron-builder": "^24.6.3"
+    }
+}
